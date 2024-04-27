@@ -79,7 +79,7 @@ This equation gives us an approximate value of $N$ at time $t = t_1$ in terms of
 Our generic equation looks like the following,
 
 <p align="center">
-  $N(t_{i+1}) = \dfrac{N(t_i)} {1 -  r \cdot h$ 
+  $N(t_{i+1}) = \dfrac{N(t_i)} {1 -  r \cdot h}$ 
 </p>
 
 Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_.
