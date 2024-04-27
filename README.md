@@ -82,9 +82,9 @@ Our generic equation looks like the following,
   $N(t_{i+1}) = \dfrac{N(t_i)} {1 -  r \cdot h}$ 
 </p>
 
-Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_.
+Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_. 
 
-This equation allows us to calculate iteratively the population size at a point in time using the population size at a previous point in time.
+A computer program can be used to generate an array of values that represent the estimated population size at sequential, discrete instances of time.
 
 
 
