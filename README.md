@@ -74,6 +74,16 @@ Solving for $N(t_1)$ we get the following equation,
   $N(t_1) = \dfrac{N(t_0)} {1 -  r \cdot \Delta t}$ 
 </p>
 
+This equation gives us an approximate value of $N$ at time $t = t_1$ in terms of $N$ at time $t = t_0$.  We can then use our estimate of $N(t_1)$ to solve for $N(t_2)$ and continue this process iteratively to generate an estimate of the population size as a function of time.
+
+Our generic equation looks like the following,
+
+<p align="center">
+  $N(t_{i+1}) = \dfrac{N(t_i)} {1 -  r \cdot h$ 
+</p>
+
+Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_.
+
 
 
 
