@@ -1,6 +1,8 @@
 # The Exponential Growth Problem
 Imagine you had a colony of bacteria that lives in an ideal environment.  In this ideal environment, the bacteria have virtually unlimited food and space to grow.
 
+<TODO: REPLACE THIS IMAGE ON THE ACTUAL GITHUB REPO>
+
 <p align="center">
   <img  src="https://github.com/tomeng70/LittleLamb/assets/12796159/7a31187d-b532-4c8b-9800-4442517adb0f">  
 </p>
@@ -84,7 +86,27 @@ Our generic equation looks like the following,
 
 Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_. 
 
-A computer program can use this equation to generate an array of values that represent the estimated population size at sequential, discrete instances in time.
+A computer program can use this equation to generate an array of values that represent the estimated population size at sequential, discrete instances in time.  
+
+The Python program, ExponentialGrowth.py, has a function called calcNext().  This function calculates the estimated population size at time $t = t_{i+1}$ using the estimated population size at time $t = t_i$:
+
+```
+def calcNext(Nprev):
+    val = Nprev / (1 - R * H)
+    return val
+```
+ExponentialGrowth.py also has a function called popExp() that calculates the exact population size using the exponential growth equation:
+
+```
+def popExp(t):
+    # calculate the population using exponential growth equation.
+    val = N0 * math.exp(R * t)
+    return val
+```
+
+If you run the program you see that the estimated population values (represented by the '+' symbols on the plot) are very close to the exact values (represented by the '.' symbols on the plot):
+
+<TODO PUT SCREENSHOTS OF PLOT AND CLOSE UP OF PLT>
 
 ## Runge Kutta Fourth Order Method
 The numerical method that we used in the previous section is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
