@@ -20,3 +20,12 @@ $\frac{dN}{N} = r \cdot dt$
 You can integrate this equation to solve for $N$ in terms of $t$.
 
 $\int{\frac{dN}{N}} = \int{ r \cdot dt }$
+
+$ln(N) = r \cdot t + C$
+
+where the variable $C$ represents a constant value.  This equation can be rewritten in the following form,
+
+$N = N_0 \cdot e^{r \cdot t}$
+
+
+
