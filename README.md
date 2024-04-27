@@ -87,7 +87,7 @@ Note that by convention, the variable $h$ is used in place of $\Delta t$.  The v
 A computer program can use this equation to generate an array of values that represent the estimated population size at sequential, discrete instances in time.
 
 ## Runge Kutta Fourth Order Method
-The previous numerical method is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
+The numerical method that we used in the previous section is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
 
 The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.  
 
