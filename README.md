@@ -29,7 +29,7 @@ You can integrate this equation to solve for $N$ in terms of $t$.
   $\int{\dfrac{dN}{N}} = \int{ r \cdot dt }$
 </p>
 
-Or, 
+Which gives us the following equation,  
 <p align="center">
   $ln(N) = r \cdot t + C$
 </p>
