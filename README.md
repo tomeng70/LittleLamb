@@ -103,7 +103,11 @@ where $f(N(t_i), t_i)$ is the slope of our population curve at time $t = t_i$.  
   $f(N(t_i), t_i) = r \cdot N(t_i)$  
 </p>
 
+The RK4 method attempts to more accurately model the rate of change of a system by using an average of four weighted terms when calculating the state of the system at the next step in time.  For the exponential growth problem, the RK4 method uses the following equation to estimate the population size at time $t = t_{i+1}$:
 
+<p align="center">
+  $N(t_{i+1}) = N(t_i) + \dfrac{h}{6} \cdot (k_1 + 2k_2 + 2k_3 + k_4)$  
+</p>
 
 
 since the value of our population function at the current time is calculated uUsing the RK4 method, a weighted average of 4 terms are used to estimate the rate of change of the population size.
