@@ -89,7 +89,33 @@ A computer program can use this equation to generate an array of values that rep
 ## Runge Kutta Fourth Order Method
 The previous numerical method is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
 
-The Runge-Kutta methods are a set of popular _explicit_ numerical methods that generate estimated values of a function at the current time based on the values of the function at a previous time.  The Runge-Kutta 4th order (RK4) method is a popular numerical method that is used to solve ordinary differential equations using four, weighted terms.
+The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.
+
+For the exponential growth problem the population of our bacterial colony at time $t = t_{i+1}$ can be estimated by calculating the slope of the population curve at time $t = t_i$ multiplying it by our time step, and then adding this value to the previous population size:
+
+<p align="center">
+  $N(t_{i+1}) = N(t_i) + h \cdot f(N(t_i), t_i)$  
+</p>
+
+where $f(N(t_i), t_i)$ is the slope of our population curve at time $t = t_i$.  Notice that this rate function is written as a function of both time, $t$, and population size, $N$.  For the exponential growth problem, the rate equation is actually only a function of the population size:
+
+<p align="center">
+  $f(N(t_i), t_i) = r \cdot N(t_i)$  
+</p>
+
+
+
+
+since the value of our population function at the current time is calculated uUsing the RK4 method, a weighted average of 4 terms are used to estimate the rate of change of the population size.
+
+T
+<p align="center">
+  $N(t_{i+1}) = N(t_i) + f(N(t_i), t_i)$
+</p>
+
+
+
+The Runge-Kutta 4th order (RK4) method is a popular numerical method that is used to solve ordinary differential equations using four, weighted terms.
 
 Take a look at the following equation,
 
