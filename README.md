@@ -27,6 +27,10 @@ You can integrate this equation to solve for $N$ in terms of $t$.
 
 <p align="center">
   $\int{\dfrac{dN}{N}} = \int{ r \cdot dt }$
+</p>
+
+Or, 
+<p align="center">
   $ln(N) = r \cdot t + C$
 </p>
 
