@@ -11,7 +11,7 @@ The more bacteria you have, the faster the population will grow.
 This rate equation for population growth can be expressed as follows,
 
 <p align="center">
-  $\frac{dN}{dt} = r \cdot N$
+  $\dfrac{dN}{dt} = r \cdot N$
 </p>
 
 In this equation, $N$ represents the population size, $t$ represents time, and the variable $r$ is a constant value know as the <i>rate of growth</i> of the population.
@@ -20,13 +20,13 @@ In this equation, $N$ represents the population size, $t$ represents time, and t
 An analytical solution for this rate equation can be obtained using calculus. Using algebra, you can rearrange the terms so you get the following equation,
 
 <p align="center">
-  $\frac{dN}{N} = r \cdot dt$
+  $\dfrac{dN}{N} = r \cdot dt$
 </p>
 
 You can integrate this equation to solve for $N$ in terms of $t$.
 
 <p align="center">
-  $\int{\frac{dN}{N}} = \int{ r \cdot dt }$
+  $\int{\dfrac{dN}{N}} = \int{ r \cdot dt }$
   $ln(N) = r \cdot t + C$
 </p>
 
@@ -49,14 +49,27 @@ We can use our rate equation (which tells us what the slope of our solution is a
 
 
 <p align="center">
-  $N(t_1) = N(t_0) + (t_1 - t_0) \cdot \frac{dN}{dt}$ 
+  $N(t_1) = N(t_0) + (t_1 - t_0) \cdot \dfrac{dN}{dt}$ 
 </p>
 
 If we use the variable $\Delta t$ for the expression $(t_1 - t_0)$, we get the following equation
 
 <p align="center">
-  $N(t_1) = N(t_0) + \Delta t \cdot \frac{dN}{dt}$ 
+  $N(t_1) = N(t_0) + \Delta t \cdot \dfrac{dN}{dt}$ 
 </p>
+
+We can substitute our rate equation in place of $\frac{dN}{dt}$ to estimate the slope of the population curve at time $t_1$:
+
+<p align="center">
+  $N(t_1) = N(t_0) + \Delta t \cdot r \cdot N(t_1)$ 
+</p>
+
+Solving for $N(t_1)$ we get the following equation,
+
+<p align="center">
+  $N(t_1) = \dfrac{N(t_0)} {1 - \Delta  r \cdot t}$ 
+</p>
+
 
 
 
