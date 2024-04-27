@@ -33,7 +33,7 @@ You can integrate this equation to solve for $N$ in terms of $t$.
 where the variable $C$ represents a constant value.  This equation can be rewritten in the following form,
 
 <p align="center">
-  $N = N_0 \cdot e^{r \cdot t}$
+  $N = N_0 \cdot e^{rt}$
 </p>
 
 This equation is an exact solution for the population size, $N$, as a function of time, $t$. $N_0$ is the initial population size at time $t = 0$.  If you know the value of $N_0$ then you can calculate the population at any time $t$.
