@@ -118,3 +118,29 @@ Describing the Runge-Kutta method in detail is beyond the intended scope of this
 <p align="center">
   <a href = "https://youtu.be/ydFM5yON-24?feature=shared">The Runge-Kutta Fourth Order Method (YouTube)</a>
 </p>
+
+The Python program, ExponentialGrowth.py, has code that calculates the estimated population size at time $t = t_{i+1}$ using the average of the four weighted RK terms:
+
+```
+def rateEqn(N, t):
+    # note for exponential growth growth, the rate does not depend on time.
+    # instead, it's based on the current population only.
+    # we will still pass time as an argument to this function, 
+    # even though it's not needed.
+    val = R * N
+    return val
+
+def calcRKNext(N, t):
+    # calculate the runge kutta terms.
+    k1 = rateEqn(N, t)
+    k2 = rateEqn(N + k1 / 2, t + H/2)
+    k3 = rateEqn(N + k2 / 2, t + H/2)
+    k4 = rateEqn(N + k3, t + H)
+    
+    # estimate the next value based on previous value.
+    nextVal = N + H * (k1 + 2 * k2 + 2 * k3 + k4) / 6
+    return nextVal
+```
+If you run the program you see that the estimated population values (represented by the '^' symbols on the plot) are very close to the exact values (represented by the '.' symbols on the plot):
+
+**TODO** PUT SCREENSHOTS OF PLOT AND CLOSE UP OF PLT
