@@ -86,12 +86,27 @@ Note that by convention, the variable $h$ is used in place of $\Delta t$.  The v
 
 A computer program can use this equation to generate an array of values that represent the estimated population size at sequential, discrete instances in time.
 
-## Runge Kutta Method
+## Runge Kutta Fourth Order Method
+The previous numerical method is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
 
+The Runge-Kutta methods are a set of popular _explicit_ numerical methods that generate estimated values of a function at the current time based on the values of the function at a previous time.  The Runge-Kutta 4th order (RK4) method is a popular numerical method that is used to solve ordinary differential equations.
 
+Take a look at the following equation,
 
+<p align="center">
+  $N(t_{i+1}) = N(t_i) + \Delta t \cdot \dfrac{dN}{dt} = N(t_i) + \Delta t \cdot r \cdot N(t_i)$
+</p>
 
+In this equation above, we multiply the slope of our population function, $\dfrac{dN}{dt}$ by the size of our time step, $\Delta t$, to estimate how much our population will change from time $t = t_i$ to time $t = t_{i+1}$.  We add this change in population to our previous population value, $N(t_i)$ and the result is an estimate for the population value, $N(t_{i+1}$.  
 
+This simplified approach is a version of the Runge-Kutta method (also known as Euler's method) that uses the first derivative of the population function as the _rate equation_ for the problem.  
 
+The Runge-Kutta family of methods attempt to model the _rate equation_ that is used to estimate the change in a function like our population function more accurately:
+
+<p align="center">
+  $N(t_{i+1}) = N(t_i) + h \cdot f(N(t_i), t_i)$
+</p>
+
+In the equation above, the variable $h$ represents our time step, and the function $f(N(t_i), t_i)$ is our rate equation that is evaluated when the population is equal to $N(t_i)$ and the time is equal to $t_i$.  
 
 
