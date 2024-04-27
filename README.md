@@ -68,7 +68,9 @@ We can substitute our rate equation in place of $\frac{dN}{dt}$ to estimate the 
   $N(t_1) = N(t_0) + \Delta t \cdot r \cdot N(t_1)$ 
 </p>
 
-Solving for $N(t_1)$ we get the following equation,
+Note that the numerical method that we are using to solve for $N(t_1)$ is an _implicit_ method, since in order to solve for $N(t_1)$ we have to solve an equation that involves both $N(t_1)$ and the previous value $N(t_0)$.
+
+Solving this implicit equation for $N(t_1)$ we get the following equation,
 
 <p align="center">
   $N(t_1) = \dfrac{N(t_0)} {1 -  r \cdot \Delta t}$ 
@@ -85,6 +87,9 @@ Our generic equation looks like the following,
 Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_. 
 
 A computer program can use this equation to generate an array of values that represent the estimated population size at sequential, discrete instances in time.
+
+## Runge Kutta Method
+
 
 
 
