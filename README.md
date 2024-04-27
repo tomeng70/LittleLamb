@@ -84,6 +84,10 @@ Our generic equation looks like the following,
 
 Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_.
 
+This equation allows us to calculate iteratively the population size at a point in time using the population size at a previous point in time.
+
+
+
 
 
 
