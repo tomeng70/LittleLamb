@@ -67,7 +67,7 @@ We can substitute our rate equation in place of $\frac{dN}{dt}$ to estimate the 
 Solving for $N(t_1)$ we get the following equation,
 
 <p align="center">
-  $N(t_1) = \dfrac{N(t_0)} {1 - \Delta  r \cdot t}$ 
+  $N(t_1) = \dfrac{N(t_0)} {1 -  r \cdot \Delta t}$ 
 </p>
 
 
