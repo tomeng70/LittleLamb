@@ -91,7 +91,7 @@ The previous numerical method is considered to be an _implicit method_ because i
 
 The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.  
 
-Describing the Runge-Kutta method is beyond the intended scope of this repository.  However, the following YouTube video provides a very brief, but helpful description of how the RK4 method of estimation is implemented:
+Describing the Runge-Kutta method in detail is beyond the intended scope of this repository.  However, the following YouTube video provides a very brief, but helpful description of how the RK4 method of estimation is implemented:
 
 <p align="center">
   <a href = "https://youtu.be/ydFM5yON-24?feature=shared">The Runge-Kutta Fourth Order Method (YouTube)</a>
