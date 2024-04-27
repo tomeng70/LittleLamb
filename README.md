@@ -84,7 +84,7 @@ Our generic equation looks like the following,
 
 Note that by convention, the variable $h$ is used in place of $\Delta t$.  The variable $h$ is referred to as the _time step_. 
 
-A computer program can be used to generate an array of values that represent the estimated population size at sequential, discrete instances of time.
+A computer program can use this equation to generate an array of values that represent the estimated population size at sequential, discrete instances in time.
 
 
 
