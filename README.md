@@ -89,7 +89,12 @@ A computer program can use this equation to generate an array of values that rep
 ## Runge Kutta Fourth Order Method
 The previous numerical method is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
 
-The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.
+The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.  The following link takes you to an instruction video that provides a brief, but very helpful description of the RK4 method of estimation:
+
+<p align="center">
+  <a href = "https://youtu.be/ydFM5yON-24?feature=shared">The Runge-Kutta Fourth Order Method (YouTube)</a>
+</p>
+
 
 For the exponential growth problem the population of our bacterial colony at time $t = t_{i+1}$ can be estimated by calculating the slope of the population curve at time $t = t_i$ multiplying it by our time step, and then adding this value to the previous population size:
 
@@ -103,47 +108,18 @@ where $f(N(t_i), t_i)$ is the slope of our population curve at time $t = t_i$.  
   $f(N(t_i), t_i) = r \cdot N(t_i)$  
 </p>
 
-The RK4 method attempts to more accurately model the rate of change of a system by using an average of four weighted terms when calculating the state of the system at the next step in time.  For the exponential growth problem, the RK4 method uses the following equation to estimate the population size at time $t = t_{i+1}$:
+The RK4 method attempts to more accurately model the rate of change of a system by using an average of four weighted terms when calculating the state of the system at the next step in time.  
+
+For the exponential growth problem, the RK4 method uses the following equation to estimate the population size at time $t = t_{i+1}$:
 
 <p align="center">
   $N(t_{i+1}) = N(t_i) + \dfrac{h}{6} \cdot (k_1 + 2k_2 + 2k_3 + k_4)$  
 </p>
 
-
-since the value of our population function at the current time is calculated uUsing the RK4 method, a weighted average of 4 terms are used to estimate the rate of change of the population size.
-
-T
-<p align="center">
-  $N(t_{i+1}) = N(t_i) + f(N(t_i), t_i)$
-</p>
-
-
-
-The Runge-Kutta 4th order (RK4) method is a popular numerical method that is used to solve ordinary differential equations using four, weighted terms.
-
-Take a look at the following equation,
+where the terms $k_1$, $k_2$, $k_3$, and $k_4$ are defined as follows,
 
 <p align="center">
-  $N(t_{i+1}) = N(t_i) + \Delta t \cdot \dfrac{dN}{dt} = N(t_i) + \Delta t \cdot r \cdot N(t_i)$
-</p>
-
-In this equation above, we multiply the slope of our population function, $\dfrac{dN}{dt}$ by the size of our time step, $\Delta t$, to estimate how much our population will change from time $t = t_i$ to time $t = t_{i+1}$.  We add this change in population to our previous population value, $N(t_i)$ and the result is an estimate for the population value, $N(t_{i+1}$.  
-
-This simplified approach is one version of the Runge-Kutta family of methods.  This method, which is also known as Euler's method, uses the first derivative of the population function to calculate the value of the system's _rate equation_ using the previous time step.  
-
-The Runge-Kutta family of methods attempt to model the _rate equation_ that is used to estimate the change in a function like our population function more accurately:
-
-<p align="center">
-  $N(t_{i+1}) = N(t_i) + h \cdot f(N(t_i), t_i)$
-</p>
-
-In the equation above, the variable $h$ represents our time step, and the function $f(N(t_i), t_i)$ is our rate equation that is evaluated when the population is equal to $N(t_i)$ and the time is equal to $t_i$.
-
-For the RK4 version of the Runge-Kutta family of methods, the rate equation for our exponential growth equation is calculated as follows,
-
-<p align="center">
-  $k1 =   h \cdot r \cdot N(t_i)$
-  <br>
-  $k2 = $
+  $k_1 = h \cdot f(N(t_i), t_i) = h \cdot r \cdot N(t_i)$<br>
+  $k_2 = h \cdot f(N(t_i) + k_1, t_i) = h \cdot r \cdot N(t_i)$<br>
 </p>
 
