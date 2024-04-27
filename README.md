@@ -13,6 +13,7 @@ $\frac{dN}{dt} = r \cdot N$
 
 In this equation, $N$ represents the population size, $t$ represents time, and the variable $r$ is a constant value know as the <i>rate of growth</i> of the population.
 
+## Exact Solution
 An analytical solution for this rate equation can be obtained using calculus. Using algebra, you can rearrange the terms so you get the following equation,
 
 $\frac{dN}{N} = r \cdot dt$
@@ -27,5 +28,7 @@ where the variable $C$ represents a constant value.  This equation can be rewrit
 
 $N = N_0 \cdot e^{r \cdot t}$
 
+This equation is an exact solution for the population size, $N$, as a function of time, $t$. $N_0$ is the initial population size at time $t = 0$.  If you know the value of $N_0$ then you can calculate the population at any time $t$.
 
+# A Simple Numerical Solution
 
